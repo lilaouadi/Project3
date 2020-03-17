@@ -5,6 +5,7 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import Card from '../components/Card';
 
 
 class Members extends Component {
@@ -73,10 +74,15 @@ class Members extends Component {
                     </Link>
                     <DeleteBtn onClick={() => this.deleteMember(member._id)} />
                   </ListItem>
+             
                 ))}
               </List>
             ) : (
-                <h3>No Results to Display</h3>
+              <div>
+                  <h3>No Results to Display</h3>
+                <Card />
+              </div>
+                
               )}
           </Col>
         </Row>
