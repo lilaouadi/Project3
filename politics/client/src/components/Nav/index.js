@@ -2,11 +2,25 @@ import React from "react";
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a className="navbar-brand" href="/">
-        MP List
-      </a>
-    </nav>
+    <div>
+
+
+                <nav>
+                    <div className="nav-wrapper black">
+                    <a href="#" className="brand-logo center">MP list</a>
+                    
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                        <li><a href="sass.html">Rankings</a></li>
+                        <li><a href="badges.html">Favorites</a></li>
+                        <li><a href="collapsible.html">About</a></li>
+                    </ul>
+                    </div>
+                </nav>
+
+       
+  
+  
+            </div>
   );
 }
 

@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 
 
+
 class Members extends Component {
   state = {
     members: [],
@@ -55,13 +56,17 @@ class Members extends Component {
 
   render() {
     return (
+
+      
       <Container fluid>
-        <Row>
-          <Col size="md-3"></Col>
-          <Col size="md-6 sm-12">
+
             <Jumbotron>
               <h1>Members Of The 9th Parliament of Zimbabwe</h1>
             </Jumbotron>
+        <Row>
+         
+
+
             {this.state.members.length ? (
               <List>
                 {this.state.members.map(member => (
@@ -71,14 +76,14 @@ class Members extends Component {
                         {member.constituency} constituency is represented by {member.lastName}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteMember(member._id)} />
+                   
                   </ListItem>
                 ))}
               </List>
             ) : (
                 <h3>No Results to Display</h3>
               )}
-          </Col>
+        
         </Row>
       </Container>
     );
