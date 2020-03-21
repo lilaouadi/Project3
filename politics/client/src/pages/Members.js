@@ -2,7 +2,7 @@ import React,{Component} from "react";
 import API from "../utils/API";
 import MemberCard from "../components/Card/MemberCard"
 import Searchbar from "../components/Nav/SearchBar";
-import { Button, Container, Row, Col } from 'react-materialize';
+import {  Container, Row, Col } from 'react-materialize';
 
 
 
@@ -52,6 +52,9 @@ class Members extends Component {
     }
   };
 
+
+ 
+
   render() {
     return (
    
@@ -60,6 +63,29 @@ class Members extends Component {
          <Searchbar>
 
          </Searchbar>
+
+
+         <Container>
+          {this.state.members.length ? (
+            <Row>
+              {this.state.members.map(member => (
+            <MemberCard key={member._id}
+            lastName={member.lastName}
+            constituency={member.constituency}
+            bio={member.bio}
+           / >
+  
+              ))}
+            </Row>
+          ) : (
+           <Row>
+              <h3>No Results to Display</h3>
+              </Row>
+          )}
+   
+
+
+         </Container>
     
         <Container>
        
@@ -69,9 +95,7 @@ class Members extends Component {
     <Row>
 
       <Col>
-         <MemberCard>
-
-         </MemberCard>
+     
 
          </Col>
          <Col>
