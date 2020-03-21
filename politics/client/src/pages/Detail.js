@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+import {  Container, Row, Col } from 'react-materialize';
+
 import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 
@@ -22,11 +22,11 @@ class Detail extends Component {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <Jumbotron>
+            <Container>
               <h1>
                 {this.state.member.constituency} constituency is represented by {this.state.member.lastName}
               </h1>
-            </Jumbotron>
+            </Container>
           </Col>
         </Row>
         <Row>

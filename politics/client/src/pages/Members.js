@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
+import React,{Component} from "react";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import MemberCard from "../components/Card/MemberCard"
+import Searchbar from "../components/Nav/SearchBar";
+import { Button, Container, Row, Col } from 'react-materialize';
+
 
 
 class Members extends Component {
@@ -55,32 +54,37 @@ class Members extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-3"></Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Members Of The 9th Parliament of Zimbabwe</h1>
-            </Jumbotron>
-            {this.state.members.length ? (
-              <List>
-                {this.state.members.map(member => (
-                  <ListItem key={member._id}>
-                    <Link to={"/members/" + member._id}>
-                      <strong>
-                        {member.constituency} constituency is represented by {member.lastName}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => this.deleteMember(member._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-                <h3>No Results to Display</h3>
-              )}
-          </Col>
-        </Row>
-      </Container>
+   
+       <div>
+
+         <Searchbar>
+
+         </Searchbar>
+    
+        <Container>
+       
+         
+
+     
+    <Row>
+
+      <Col>
+         <MemberCard>
+
+         </MemberCard>
+
+         </Col>
+         <Col>
+         <MemberCard>
+
+         </MemberCard>
+
+         </Col>
+         </Row>
+         </Container>
+
+       
+             </div>
     );
   }
 }
