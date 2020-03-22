@@ -4,7 +4,7 @@ import React from "react";
 function MemberCard(props) {
     return (
    
-      <div className="col s6 m4 l6">
+      <div className="col s6 m4 l4">
        <div className="card black ">
         <div className="card-image">
           <img alt={props.name} src={props.image} />

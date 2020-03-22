@@ -11,7 +11,7 @@ import React from 'react'
                     <div className="nav-wrapper black">
                     <a href="#" className="brand-logo center">MP list</a>
                     
-                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                    <ul id="nav-mobile" className="right hide-on-med-and-down white-text">
                         <li><a href="sass.html">Rankings</a></li>
                         <li><a href="badges.html">Favorites</a></li>
                         <li><a href="collapsible.html">About</a></li>

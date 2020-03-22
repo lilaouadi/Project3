@@ -65,7 +65,7 @@ class Members extends Component {
          </Searchbar>
 
 
-         <Container>
+        
           {this.state.members.length ? (
             <Row>
               {this.state.members.map(member => (
@@ -85,27 +85,11 @@ class Members extends Component {
    
 
 
-         </Container>
-    
-        <Container>
-       
+     
          
 
      
-    <Row>
 
-      <Col>
-     
-
-         </Col>
-         <Col>
-         <MemberCard>
-
-         </MemberCard>
-
-         </Col>
-         </Row>
-         </Container>
 
        
              </div>

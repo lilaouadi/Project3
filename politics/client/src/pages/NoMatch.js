@@ -1,21 +1,24 @@
 import React from "react";
-import {  Container, Row, Col } from 'react-materialize';
+import {  Container, Row, Card } from 'react-materialize';
 
 
 function NoMatch() {
   return (
-    <Container fluid>
+    <Container  >
       <Row>
-        <Col size="md-12">
-          <Container>
-            <h1>404 Page Not Found</h1>
+      
+          <Container className="center">
+            <Row/>
+            <Card className="black">
+            <h1 className="white-text">404 Page Not Found</h1>
             <h1>
               <span role="img" aria-label="Face With Rolling Eyes Emoji">
                 🙄
               </span>
             </h1>
+            </Card>
           </Container>
-        </Col>
+   
       </Row>
     </Container>
   );
