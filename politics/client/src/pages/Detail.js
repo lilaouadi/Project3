@@ -53,7 +53,7 @@ class Detail extends Component {
                 dnasldldmasd
                 dsaklmaskdmaslkd
                 sdmakdmasd
-                (for ilustration purposes only)
+               
                 {this.state.member.bio}
               </h5>
               </Card>
