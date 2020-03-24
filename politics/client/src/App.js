@@ -1,11 +1,12 @@
 import React, {component} from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Members from "./pages/Members";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Navbar from "./components/Nav/Navbar";
-
+import Members from './pages/Members'
+import Detail from './pages/Detail'
+import NoMatch from './pages/NoMatch'
+import Navbar from './components/Nav/Navbar'
+import SignIn from './components/auth/SignIn'
+import SignUp from './components/auth/SignUp'
 
 function App() {
   return (
@@ -13,10 +14,13 @@ function App() {
       <div>
         <Navbar />
         <Switch>
+          <Route path='/signin' component={SignIn} />
+          <Route path='/signup' component={SignUp} />
           <Route exact path="/" component={Members} />
           <Route exact path="/members" component={Members} />
           <Route exact path="/members/:id" component={Detail} />
           <Route component={NoMatch} />
+          
         </Switch>
      
       </div>
