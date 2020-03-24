@@ -5,8 +5,8 @@ import Members from './pages/Members'
 import Detail from './pages/Detail'
 import NoMatch from './pages/NoMatch'
 import Navbar from './components/Nav/Navbar'
-import SignIn from './components/auth/SignIn'
-import SignUp from './components/auth/SignUp'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
 
 function App() {
   return (
