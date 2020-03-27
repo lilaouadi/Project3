@@ -1,5 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Icon} from 'react-materialize';
+
+
 
  function Navbar() {
     
@@ -10,17 +12,24 @@ import { Link } from 'react-router-dom'
                 <nav>
 
                     <div className="nav-wrapper black">
-                    <a href="#" className="brand-logo center">MP list</a>
+                    <a href="/" className="brand-logo center">MP list</a>
                     
                     <ul id="nav-mobile" className="right hide-on-med-and-down white-text">
-                        <li><a href="sass.html">Rankings</a></li>
-                        <li><a href="badges.html">Favorites</a></li>
+                      
                         <li><a href="collapsible.html">About</a></li>
-                        <li><a href="sass.html">Sign In</a></li>
-                        <li><a href="sass.html">Sign Out</a></li>
+                        <li><a href="/">Details</a></li>
+                        
                         
                     </ul>
-                    </div>
+                   
+                    <ul id="nav-mobile" className="left hide-on-med-and-down white-text">
+                      
+                     
+                      <li><a href="/SignUP"><Icon small className="left">add</Icon>Sign Up</a></li>
+                      <li><a href="/SignIn">Sign In<Icon small className='left'>account_circle</Icon></a></li>
+                      
+                  </ul>
+                  </div>
                 </nav>
 
        
