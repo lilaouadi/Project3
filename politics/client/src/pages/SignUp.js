@@ -19,28 +19,30 @@ class SignUp extends Component {
     render() {
         return (
             <div className="container">
+                    <div className="card-panel black">
                 <form onSubmit={this.handleSubmit}>
                   <h5 className="white-text center text-darken-3">Sign Up</h5>
                   <div className="input-field">
                       <label htmlfor="email">Email</label>
-                      <input type="email" id="email" onChange={this.handleChange}/>
+                      <input className="white-text"  type="email" id="email" onChange={this.handleChange}/>
                       </div>
                       <div className="input-field">
                       <label htmlfor="password">Password</label>
-                      <input type="password" id="password" onChange={this.handleChange}/>
+                      <input className="white-text"  type="password" id="password" onChange={this.handleChange}/>
                       </div>
                       <div className="input-field">
                       <label htmlfor="firstName">First Name</label>
-                      <input type="text" id="firstName" onChange={this.handleChange}/>
+                      <input className="white-text"  type="text" id="firstName" onChange={this.handleChange}/>
                       </div>
                       <div className="input-field">
                       <label htmlfor="lastName">Last Name</label>
-                      <input type="text" id="lastName" onChange={this.handleChange}/>
+                      <input className="white-text"  type="text" id="lastName" onChange={this.handleChange}/>
                       </div>
                        <div className="input-field">
                            <button className="btn-flat white-text lighten-1 z-depth-0">Sign Up</button>
                            </div>  
                 </form>
+                </div>
 
             </div>
         )
