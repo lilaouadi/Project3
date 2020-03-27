@@ -23,14 +23,9 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-<<<<<<< HEAD
-    "materialize-css": "^1.0.0-rc.2",
-    "mongoose": "^5.3.16"
-=======
     "mongoose": "^5.3.16",
     "prop-types": "^15.7.2",
     "react-materialize": "^3.5.9",
     "react-router-dom": "^5.1.2"
->>>>>>> 6eecb601d76eecc7ae3565c46c74e48ac18feb65
   }
 }
