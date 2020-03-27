@@ -1,14 +1,31 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
- const SignInLinks = () => {
+ function Navbar() {
     
         return (
-            <ul className="left">
-                <li>NavLink to='/'>Log Out</NavLink</li>
-            </ul>
+            <div>
+
+
+                <nav>
+
+                    <div className="nav-wrapper black">
+                    <a href="#" className="brand-logo center">MP list</a>
+                    
+                    <ul id="nav-mobile" className="right hide-on-med-and-down">
+                        <li><a href="sass.html">Rankings</a></li>
+                        <li><a href="badges.html">Favorites</a></li>
+                        <li><a href="collapsible.html">About</a></li>
+                    </ul>
+                    </div>
+                </nav>
+
+       
+  
+  
+            </div>
         )
   
 }
 
-export default SignedInLinks
+export default Navbar
