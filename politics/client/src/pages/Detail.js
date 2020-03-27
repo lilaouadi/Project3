@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+import {  Container, Row, Col,Button ,Card} from 'react-materialize';
+import MemberCard from "../components/Card/MemberCard"
 import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 
@@ -19,53 +19,80 @@ class Detail extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>
+
+      <div>
+    
+   
+        {/* tittle container */}
+            <Container>
+
+             <Card className="black white-text center">
+              <h3 >
                 {this.state.member.constituency} constituency is represented by {this.state.member.lastName}
-              </h1>
-            </Jumbotron>
-          </Col>
-        </Row>
+              </h3>
+              </Card>
+            </Container>
+        
+    {/* Row for everything */}
         <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
+
+          {/* Col for member info */}
+            <Col className="l6">
+          <Card className="black white-text">
+          <h4>Name</h4>
+          <h4>Contact Info</h4>
+          <h4>Record</h4>
+          </Card>
+            </Col>
+
+            {/* col for member Bio */}
+        <Col className="l6">
+           <Card className="black white-text">
               <h1>Bio</h1>
-              <p>
+              <h5> 
+                dnasldldmasd
+                dsaklmaskdmaslkd
+                sdmakdmasd
+               
                 {this.state.member.bio}
-              </p>
-            </article>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-6">
+              </h5>
+              </Card>
+            </Col>
+            <Col className="l6">
+              </Col>
+
+{/* col for updating the bio */}
+            <Col className="l6">
+
+              <Card className="black white-text">
             <article>
-              <h1>Would you like to update bio?</h1>
+              <h1 className="white-text">Would you like to update bio?</h1>
             </article>
             <form>
-              <TextArea
+              <TextArea className="white-text"
                 value={this.state.bio}
                 onChange={this.handleInputChange}
                 name="bio"
                 placeholder="Bio (Optional)"
               />
-              <FormBtn
+              <Button
                 disabled={!(this.state.lastName && this.state.constituency)}
                 onClick={this.handleFormSubmit}
               >
                 Submit Member Bio
-              </FormBtn>
+              </Button>
             </form>
+            </Card>
           </Col>
         </Row>
+       
         <Row>
           <Col size="md-2">
             <Link to="/">← Back to Representatives</Link>
           </Col>
         </Row>
-      </Container>
+   
+      </div>
     );
   }
 }
