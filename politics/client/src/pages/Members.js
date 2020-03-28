@@ -3,6 +3,7 @@ import API from "../utils/API";
 import MemberCard from "../components/Card/MemberCard"
 import Searchbar from "../components/Nav/SearchBar";
 import {  Container, Row, Col } from 'react-materialize';
+import { Link } from "react-router-dom";
 
 
 
@@ -63,23 +64,34 @@ class Members extends Component {
          <Searchbar>
 
          </Searchbar>
+      {console.log(this.state.members)}
 
-
-        
           {this.state.members.length ? (
             <Row>
               {this.state.members.map(member => (
             <MemberCard key={member._id}
+            image={member.imageHref}
             lastName={member.lastName}
             constituency={member.constituency}
             bio={member.bio}
+            search={  
+                 
+                
+
+              <Link to={"/members/" + member._id}>
+              
+               more details 
+           
+            </Link>
+
+             }
            / >
   
               ))}
             </Row>
           ) : (
            <Row>
-              <h3>No Results to Display</h3>
+              <h3 className="center">loading...</h3>
               </Row>
           )}
    
