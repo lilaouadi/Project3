@@ -17,7 +17,8 @@ const mpSeed = [
     "otherNames": "",
     "constituency": "Bulawayo East",
     "party": "MDC- Alliance",
-    "province": "Bulawayo Metropolitan"
+    "province": "Bulawayo Metropolitan",
+    "password": "khjg78676jkh",
   },
 
   /* 2 */
