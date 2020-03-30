@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default {
   // Gets all members
   getMembers: function () {
@@ -16,5 +17,8 @@ export default {
   // Saves a member to the database
   saveMember: function (memberData) {
     return axios.post("/api/members", memberData);
+  },
+  saveUser: function (userData) {
+    return axios.post("/api/users", userData);
   }
 };
