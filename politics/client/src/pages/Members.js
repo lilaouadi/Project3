@@ -4,6 +4,7 @@ import MemberCard from "../components/Card/MemberCard"
 import Searchbar from "../components/Nav/SearchBar";
 import {  Container, Row, Col } from 'react-materialize';
 import { Link } from "react-router-dom";
+import MPimage from "../img/MPimage.png"
 
 
 
@@ -67,10 +68,15 @@ class Members extends Component {
       {console.log(this.state.members)}
 
           {this.state.members.length ? (
+
             <Row>
               {this.state.members.map(member => (
+
+
             <MemberCard key={member._id}
-            image={member.imageHref}
+
+
+            image={MPimage}
             lastName={member.lastName}
             constituency={member.constituency}
             bio={member.bio}

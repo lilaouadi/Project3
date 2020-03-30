@@ -21,6 +21,9 @@ class Detail extends Component {
       .catch(err => console.log(err));
   }
 
+
+
+
   render() {
     return (
 
@@ -37,40 +40,42 @@ class Detail extends Component {
               </Card>
             </Container>
         
-    {/* Row for everything */}
-        <Row>
-          {/* Col for member info */}
-   
-                    <Col
-                      m={6}
-                      s={12}
-                    >
-                      <Card className="black white-text"
-                        actions={[
-                          <a key="1" href="# ">This is a Link</a>
-                        ]}
-                        closeIcon={<Icon>close</Icon>}
-                        header={<CardTitle image={this.state.member.imageHref}>Card Title</CardTitle>}
-                        revealIcon={<Icon>more_vert</Icon>}
-                      >
-                        Here is the standard card with an image thumbnail.
-                      </Card>
-                    </Col>
-               
-
-
-            {/* col for member Bio */}
-        <Col className="l6">
-           <Card className="black white-text">
-              <h1>Bio</h1>
-              <h5> 
+              {/* Row for everything */}
+                  <Row>
+                    {/* Col for member info */}
             
-                {}
-              </h5>
-              </Card>
-            </Col>
+                              <Col
+                                m={6}
+                                s={12}
+                              >
+                                <Card className="black white-text"
+                              
+                                  header={<CardTitle image={this.state.member.imageHref}></CardTitle>}
+                                
+                                >
+                              
+                                </Card>
+                              </Col>
+                        
 
 
+                      {/* col for member Bio */}
+                  <Col className="l6">
+                    <Card className="black white-text">
+                        <h1>Bio</h1>
+                        <h5> 
+                      
+                          {this.state.member.bio
+                          
+                          
+                          
+                          }
+                        </h5>
+                        </Card>
+                      </Col>
+
+                 
+              
             <Col className="l6">
               </Col>
 
@@ -98,7 +103,8 @@ class Detail extends Component {
             </Card>
           </Col>
         </Row>
-       
+
+        {/* roww */}
         <Row>
           <Col size="md-2">
             <Link to="/">← Back to Representatives</Link>
