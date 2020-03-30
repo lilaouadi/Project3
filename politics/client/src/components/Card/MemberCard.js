@@ -8,7 +8,7 @@ function MemberCard(props) {
    
       <div className="col s6 m3 l3">
        <div className="card black ">
-        <div className=" card-image " >
+        <div className=" card-image grey darken-3" >
         
         <img className="circle " width="200" height="200"  src={props.image}></img>
         
