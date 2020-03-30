@@ -1,9 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {  Container, Row, Col,Button ,Card} from 'react-materialize';
+import {  Container, Row, Col,Button ,Card,Icon,CardTitle} from 'react-materialize';
 import MemberCard from "../components/Card/MemberCard"
 import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
+
+
+
+
 
 class Detail extends Component {
   state = {
@@ -16,6 +20,9 @@ class Detail extends Component {
       .then(res => this.setState({ member: res.data }))
       .catch(err => console.log(err));
   }
+
+
+
 
   render() {
     return (
@@ -33,35 +40,46 @@ class Detail extends Component {
               </Card>
             </Container>
         
-    {/* Row for everything */}
-        <Row>
+              {/* Row for everything */}
+                  <Row>
+                    {/* Col for member info */}
+            
+                              <Col
+                                m={6}
+                                s={12}
+                              >
+                                <Card className="black white-text"
+                              
+                                  header={<CardTitle image={this.state.member.imageHref}></CardTitle>}
+                                
+                                >
+                              
+                                </Card>
+                              </Col>
+                        
 
-          {/* Col for member info */}
-            <Col className="l6">
-          <Card className="black white-text">
-          <h4>Name</h4>
-          <h4>Contact Info</h4>
-          <h4>Record</h4>
-          </Card>
-            </Col>
 
-            {/* col for member Bio */}
-        <Col className="l6">
-           <Card className="black white-text">
-              <h1>Bio</h1>
-              <h5> 
-                dnasldldmasd
-                dsaklmaskdmaslkd
-                sdmakdmasd
-               
-                {this.state.member.bio}
-              </h5>
-              </Card>
-            </Col>
+                      {/* col for member Bio */}
+                  <Col className="l6">
+                    <Card className="black white-text">
+                        <h1>Bio</h1>
+                        <h5> 
+                      
+                          {this.state.member.bio
+                          
+                          
+                          
+                          }
+                        </h5>
+                        </Card>
+                      </Col>
+
+                 
+              
             <Col className="l6">
               </Col>
 
-{/* col for updating the bio */}
+            {/* col for updating the bio */}
             <Col className="l6">
 
               <Card className="black white-text">
@@ -85,7 +103,8 @@ class Detail extends Component {
             </Card>
           </Col>
         </Row>
-       
+
+        {/* roww */}
         <Row>
           <Col size="md-2">
             <Link to="/">← Back to Representatives</Link>
@@ -94,7 +113,7 @@ class Detail extends Component {
    
       </div>
     );
-  }
+                      }
 }
 
 export default Detail;
