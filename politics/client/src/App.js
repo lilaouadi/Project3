@@ -1,30 +1,35 @@
-import React, {component} from "react";
+import React, { useState } from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Members from './pages/Members'
-import Detail from './pages/Detail'
-import NoMatch from './pages/NoMatch'
-import Navbar from './components/Nav/Navbar'
-import SignIn from './pages/SignIn'
-import SignUp from './pages/SignUp'
+
+import NoMatch from "./pages/NoMatch";
+import Navbar from "./components/Nav/Navbar";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import HooksDetails from "./pages/HooksDetails";
+import HooksMembers from "./pages/HooksMembers";
+import { MemberContext } from "./context/MembersContext";
 
 function App() {
+  const [members, setmembers] = useState([]);
+
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Switch>
-          <Route path='/signin' component={SignIn} />
-          <Route path='/signup' component={SignUp} />
-          <Route exact path="/" component={Members} />
-          <Route exact path="/members" component={Members} />
-          <Route exact path="/members/:id" component={Detail} />
-          <Route component={NoMatch} />
-          
-        </Switch>
-     
-      </div>
-    </Router>
+    <MemberContext.Provider value={{ members, setmembers }}>
+      <Router>
+        <div>
+          <Navbar />
+
+          <Switch>
+            <Route path="/signin" component={SignIn} />
+            <Route path="/signup" component={SignUp} />
+            <Route exact path="/" component={HooksMembers} />
+            <Route exact path="/members" component={HooksMembers} />
+            <Route exact path="/members/:id" component={HooksDetails} />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
+      </Router>
+    </MemberContext.Provider>
   );
 }
 

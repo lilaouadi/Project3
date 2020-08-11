@@ -65,6 +65,7 @@ class Members extends Component {
          <Searchbar>
 
          </Searchbar>
+         
       {console.log(this.state.members)}
 
           {this.state.members.length ? (
@@ -74,16 +75,11 @@ class Members extends Component {
 
 
             <MemberCard key={member._id}
-
-
             image={MPimage}
             lastName={member.lastName}
             constituency={member.constituency}
             bio={member.bio}
-            search={  
-                 
-                
-
+            search={                  
               <Link to={"/members/" + member._id}>
               
                more details 
