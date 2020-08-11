@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import {
   Container,
@@ -14,19 +14,40 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 import { MemberContext } from "../context/MembersContext";
 
-function HooksDetails() {
-  const [Member, SetMember] = useState({});
+function HooksDetails(props) {
+  const { members } = useContext(MemberContext);
 
-  const loadMember = () => {
-    API.getMember(this.props.match.params.id)
-      .then((res) => {
-        SetMember(res.data);
-        console.log("Member", Member);
-      })
-      .catch((err) => console.log(err));
+  const member = members.find((member) => member._id === id);
+
+  const id = props.match.params.id;
+  console.log("id", id);
+
+  console.log("member", member);
+
+  useEffect(() => {
+    if (member === undefined) {
+      findMember(id);
+    }
+  }, []);
+
+  const findMember = (id) => {
+    members.map((x, index) => {
+      if (x._id === id) {
+        console.log("Found it", x);
+      }
+    });
   };
 
-  return <div></div>;
+  return (
+    <div>
+      {/* tittle container */}
+      <Container>
+        <Card className="black white-text center">
+          {console.log("members", members)}
+        </Card>
+      </Container>
+    </div>
+  );
 }
 
 export default HooksDetails;

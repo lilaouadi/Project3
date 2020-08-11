@@ -13,10 +13,6 @@ import MemberCard from "../components/Card/MemberCard";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 
-
-
-
-
 class Detail extends Component {
   state = {
     member: {},
